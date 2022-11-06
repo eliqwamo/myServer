@@ -4,7 +4,11 @@ const app = express();
 
 app.use(express.json());
 
-//Tali
+
+import actions from './routes/actions.js';
+app.use('/api', actions);
+
+
 const port = 3001;
 
 app.listen(port, function(){
